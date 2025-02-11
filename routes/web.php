@@ -18,6 +18,10 @@ Route::get('/admin/inputbuku', function () {
 
 Route::get ('/admin/kategori', [CategoryController::class,'index'])
                                      ->name('admin.inkategori');
+
+Route::post('/admin/kategori', [CategoryController::class, 'store'])
+                                     ->name('admin.storekategori');
+
 //untuk penulis
 Route::get('/admin/penulis', function () {
     return view(view: 'admin.penulis');
